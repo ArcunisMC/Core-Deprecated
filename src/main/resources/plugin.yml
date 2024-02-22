@@ -8,6 +8,10 @@ loadbefore: []
 authors: [phant0m2290]
 description: Developer api for arcunis plugins
 website: arcunis.com
+commands:
+  reload:
+    description: Reload all or a specific plugin
+    permission: core.reload
 permissions:
   core.admin:
     description:
@@ -15,4 +19,4 @@ permissions:
       - core.reload
     default: op
   core.reload:
-    description: Reload plugins using Core
+    description: Reload plugins using CoreAPI

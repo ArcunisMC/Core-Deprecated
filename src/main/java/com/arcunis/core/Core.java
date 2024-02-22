@@ -3,6 +3,7 @@ package com.arcunis.core;
 import com.arcunis.core.database.Database;
 import com.arcunis.core.reload.ReloadCommand;
 import com.arcunis.core.reload.ReloadEvent;
+import com.arcunis.core.reload.ReloadTabcompleter;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.Plugin;
@@ -23,6 +24,7 @@ public final class Core extends JavaPlugin {
     public void onEnable() {
         saveDefaultConfig();
         new ReloadCommand(this);
+        new ReloadTabcompleter(this);
     }
 
     @Override

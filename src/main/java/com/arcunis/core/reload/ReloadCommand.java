@@ -10,12 +10,11 @@ import org.jetbrains.annotations.NotNull;
 
 public class ReloadCommand extends Command {
     public ReloadCommand(JavaPlugin plugin) {
-        super(plugin, "reload", "Reload all or one specific module", "core.reload", null, false);
-        new ReloadTabcompleter(plugin);
+        super(plugin, "reload", false);
     }
 
     @Override
-    public boolean execute(@NotNull CommandSender sender, @NotNull String label, String[] args) {
+    public void execute(@NotNull CommandSender sender, @NotNull String label, String[] args) {
         Core core = (Core) plugin;
         if (args.length < 1) {
             sender.sendMessage(Component.text("Reloading all plugins"));
@@ -32,6 +31,5 @@ public class ReloadCommand extends Command {
                 new ReloadEvent(plugin).callEvent();
             }
         }
-        return false;
     }
 }

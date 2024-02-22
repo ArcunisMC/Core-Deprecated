@@ -14,36 +14,24 @@ import java.lang.reflect.Field;
 import java.util.List;
 import java.util.Objects;
 
-public abstract class Command extends BukkitCommand implements CommandExecutor {
+public abstract class Command implements CommandExecutor {
 
     protected JavaPlugin plugin;
     private final Boolean playerOnly;
 
-    public Command(JavaPlugin plugin, @NotNull String name, @Nullable String description, @Nullable String permission, @Nullable List<String> aliases, @Nullable Boolean playerOnly) {
-        super(name);
-        if (description != null) this.setDescription(description);
-        if (permission != null) this.setPermission(permission);
-        if (aliases != null) this.setAliases(aliases);
-
+    public Command(JavaPlugin plugin, @NotNull String name, @Nullable Boolean playerOnly) {
         this.plugin = plugin;
         this.playerOnly = playerOnly;
-
-        try {
-            Field field = plugin.getServer().getClass().getDeclaredField("commandMap");
-            field.setAccessible(true);
-            CommandMap commandMap = (CommandMap) field.get(plugin.getServer());
-            commandMap.register(name, this);
-        } catch (NoSuchFieldException | IllegalAccessException error) {
-            error.printStackTrace();
-        }
-
+        plugin.getCommand(name).setExecutor(this);
     }
 
-    public abstract boolean execute(@NotNull CommandSender sender, @NotNull String label, String[] args);
+    public abstract void execute(@NotNull CommandSender sender, @NotNull String label, String[] args);
 
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull org.bukkit.command.Command command, @NotNull String label, @NotNull String[] args) {
         if (playerOnly && !(sender instanceof Player)) return true;
-        return execute(sender, label, args);
+        execute(sender, label, args);
+        return false;
     }
+    
 }

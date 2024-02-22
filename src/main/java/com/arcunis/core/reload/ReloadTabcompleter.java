@@ -20,9 +20,7 @@ public class ReloadTabcompleter extends Tabcompleter {
         Core core = (Core) plugin;
         ArrayList<String> pluginNames = new ArrayList<>();
         for (Map.Entry<String, Plugin> plugin : core.getPlugins().entrySet()) {
-            if (plugin.getValue().getPluginMeta().getPluginDependencies().contains(core.getName())) {
-                pluginNames.add(plugin.getKey());
-            }
+            pluginNames.add(plugin.getKey());
         }
         return pluginNames;
     }
