@@ -1,0 +1,10 @@
+# =================================== #
+# ========== Configuration ========== #
+# =================================== #
+
+# ========== Database ========== #
+use_mysql: false            # Set to true if you have a mysql server. If false it uses a local sqlite database
+mysql_url: ""               # Url to your mysql database
+mysql_port: "3306"          # Port the mysql server listens to
+mysql_username: "root"      # Mysql username
+mysql_password: "root"      # Mysql password
