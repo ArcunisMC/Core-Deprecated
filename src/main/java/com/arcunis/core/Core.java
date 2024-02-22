@@ -1,5 +1,7 @@
 package com.arcunis.core;
 
+import com.arcunis.core.database.Column;
+import com.arcunis.core.database.DataType;
 import com.arcunis.core.database.Database;
 import com.arcunis.core.reload.ReloadCommand;
 import com.arcunis.core.reload.ReloadEvent;
@@ -48,6 +50,8 @@ public final class Core extends JavaPlugin {
     }
 
     public static Database Database;
+    public static Column Column;
+    public static DataType DataType;
     public Database getDatabase(JavaPlugin plugin) {
         String databaseName = plugin.getName();
         try {
