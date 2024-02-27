@@ -2,21 +2,10 @@ name: Core
 version: '${project.version}'
 main: com.arcunis.core.Core
 api-version: '1.20'
-prefix: Core
 load: STARTUP
-loadbefore: []
-authors: [phant0m2290]
-description: Developer api for arcunis plugins
-website: arcunis.com
 commands:
   reload:
-    description: Reload all or a specific plugin
-    permission: core.reload
+    permission: arcunis.core.reload
+
 permissions:
-  core.admin:
-    description:
-    children:
-      - core.reload
-    default: op
-  core.reload:
-    description: Reload plugins using CoreAPI
+  arcunis.core.reload:
