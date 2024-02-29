@@ -9,3 +9,4 @@ commands:
 
 permissions:
   arcunis.core.reload:
+    description: Reload things\

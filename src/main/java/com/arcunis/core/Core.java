@@ -1,5 +1,6 @@
 package com.arcunis.core;
 
+import com.arcunis.core.enums.ChatColor;
 import com.arcunis.core.reload.ReloadCommand;
 import com.arcunis.core.reload.ReloadEvent;
 import com.arcunis.core.reload.ReloadTabcompleter;
@@ -26,6 +27,8 @@ public final class Core extends JavaPlugin {
     public void onDisable() {
         // Plugin shutdown logic
     }
+
+    public static ChatColor ChatColor;
 
     public static Command Command;
     public static Tabcompleter Tabcompleter;
