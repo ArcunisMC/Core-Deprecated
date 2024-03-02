@@ -2,11 +2,11 @@ package com.arcunis.core.absracts;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-public abstract class Registry {
+public abstract class BaseRegistry {
 
     protected JavaPlugin plugin;
 
-    public Registry(JavaPlugin plugin) {
+    public BaseRegistry(JavaPlugin plugin) {
         this.plugin = plugin;
     }
 

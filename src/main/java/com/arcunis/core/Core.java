@@ -1,5 +1,6 @@
 package com.arcunis.core;
 
+import com.arcunis.core.absracts.BaseRegistry;
 import com.arcunis.core.enums.ChatColor;
 import com.arcunis.core.reload.ReloadCommand;
 import com.arcunis.core.reload.ReloadEvent;
@@ -30,6 +31,7 @@ public final class Core extends JavaPlugin {
 
     public static ChatColor ChatColor;
 
+    public static com.arcunis.core.absracts.BaseRegistry BaseRegistry;
     public static com.arcunis.core.absracts.Command Command;
     public static com.arcunis.core.absracts.Tabcompleter Tabcompleter;
     public static ReloadEvent ReloadEvent;
