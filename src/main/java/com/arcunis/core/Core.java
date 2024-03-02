@@ -30,8 +30,8 @@ public final class Core extends JavaPlugin {
 
     public static ChatColor ChatColor;
 
-    public static Command Command;
-    public static Tabcompleter Tabcompleter;
+    public static com.arcunis.core.absracts.Command Command;
+    public static com.arcunis.core.absracts.Tabcompleter Tabcompleter;
     public static ReloadEvent ReloadEvent;
 
     public Map<String, Plugin> getPlugins() {

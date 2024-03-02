@@ -1,4 +1,4 @@
-package com.arcunis.core;
+package com.arcunis.core.absracts;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;

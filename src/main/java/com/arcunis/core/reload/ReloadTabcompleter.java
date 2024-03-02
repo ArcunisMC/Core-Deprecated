@@ -1,7 +1,7 @@
 package com.arcunis.core.reload;
 
 import com.arcunis.core.Core;
-import com.arcunis.core.Tabcompleter;
+import com.arcunis.core.absracts.Tabcompleter;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;

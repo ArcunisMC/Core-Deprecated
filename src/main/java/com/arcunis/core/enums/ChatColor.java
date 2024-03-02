@@ -8,7 +8,7 @@ public enum ChatColor {
     RED(TextColor.color(16733525)),
     GOLD(TextColor.color(16755200)),
     YELLOW(TextColor.color(16777045)),
-    DARK_GREEN(TextColor.color(	43520)),
+    DARK_GREEN(TextColor.color(43520)),
     GREEN(TextColor.color(5635925)),
     AQUA(TextColor.color(5636095)),
     DARK_AQUA(TextColor.color(43690)),
@@ -23,7 +23,7 @@ public enum ChatColor {
 
     public final TextColor color;
 
-    private ChatColor(TextColor color) {
+    ChatColor(TextColor color) {
         this.color = color;
     }
 }

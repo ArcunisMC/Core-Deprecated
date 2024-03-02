@@ -1,6 +1,6 @@
 package com.arcunis.core.reload;
 
-import com.arcunis.core.Command;
+import com.arcunis.core.absracts.Command;
 import com.arcunis.core.Core;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
